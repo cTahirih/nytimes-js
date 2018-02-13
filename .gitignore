@@ -1,0 +1,9 @@
+#SCSS caché
+.sass-cache/
+
+#Dependency directories
+node_modules/
+
+*package-lock.json
+
+*.babelrc

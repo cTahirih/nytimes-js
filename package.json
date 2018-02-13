@@ -1,0 +1,19 @@
+{
+  "name": "nytimes-js",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build": "babel src -d public/js"
+  },
+  "keywords": [],
+  "author": "Cintia Tahirih Jaliri Pancca",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.16.2"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-preset-env": "^1.6.1"
+  }
+}
