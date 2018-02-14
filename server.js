@@ -1,9 +1,9 @@
-let express = require('express');
-let app = express();
+var express = require('express');
+var app = express();
+var server = app.listen(3000, listening);
 
-const port = process.env.PORT || 3000;
-app.listen(port, () => {
-  console.log('Server running on port '+port+'!');
-}); 
+function listening() {
+  console.log('Listennig ...');
+}
 
 app.use(express.static('public'));
