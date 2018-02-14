@@ -15,7 +15,16 @@ btnFetch.addEventListener('click', function(e) {
   e.preventDefault();
   responseContainer.innerHTML = '';
   searchedForText = searchField.value;
-  getNewsFetch();
+  fetch(`https://api.nytimes.com/svc/search/v2/articlesearch.json?q=${searchedForText}&api-key=09000718e5954c1f961b9d990d608c08`)
+    .then(function(response) {
+      return response.json();
+    }).then(function(data) {
+      const response = data.response.docs;
+      addNews(response);
+    })
+    .catch(function(error) {
+      console.log(error);
+    });
 });
 
 var getNews = function getNews() {
