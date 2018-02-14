@@ -1,6 +1,7 @@
 const searchField = document.getElementById('search-input');
 const responseContainer = document.getElementById('response-container');
 const btnXml = document.getElementById('XML');
+const btnFetch = document.getElementById('FETCH');
 let searchedForText;
 
 btnXml.addEventListener('click', function(e) {
@@ -8,6 +9,13 @@ btnXml.addEventListener('click', function(e) {
   responseContainer.innerHTML = '';
   searchedForText = searchField.value;
   getNews();
+});
+
+btnFetch.addEventListener('click', function(e) {
+  e.preventDefault();
+  responseContainer.innerHTML = '';
+  searchedForText = searchField.value;
+  getNewsFetch();
 });
 
 var getNews = function getNews() {
@@ -50,9 +58,7 @@ function addNews(news) {
       </div>
       `;
       responseContainer.innerHTML += newsRsult;
-    } else {
-      console.log('error');
-    }
+    } 
   });
 };
 
